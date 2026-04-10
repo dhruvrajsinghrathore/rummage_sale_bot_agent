@@ -53,8 +53,8 @@ OLLAMA_MODEL=qwen2.5:14b
 
 ```
 rummage_sale.py  →  Main CLI entry point & chat loop
-agent.py         →  LLM function-calling agent loop & system prompt
-tools.py         →  6 tool functions (inventory, sales, cash box)
+agent.py         →  LLM function-calling agent loop & dynamic system prompt
+tools.py         →  5 tool functions (inventory, sales, cash_box) + 1 state helper
 state.py         →  State persistence (load/save JSON)
 config.py        →  Configuration constants
 sale_state.json  →  Persisted sale state (auto-generated)
@@ -64,7 +64,6 @@ sale_state.json  →  Persisted sale state (auto-generated)
 
 | Tool | Purpose |
 |---|---|
-| `get_sale_status` | Current time, urgency level, items remaining |
 | `browse_inventory` | List unsold items (optional category filter) |
 | `get_item_details` | Item details + hidden min price for negotiation |
 | `make_sale` | Complete purchase, update inventory & cash box |
@@ -97,8 +96,9 @@ Delete `sale_state.json` to reset the sale.
 
 ## Design Decisions
 
-1. **Raw SDK over frameworks**: Uses the OpenAI-compatible API directly instead of LangChain/CrewAI to demonstrate understanding of tool-calling fundamentals
-2. **LLM as orchestrator**: The bot decides pricing strategy — code only provides tools, not business logic
-3. **Hidden minimum prices**: The LLM knows each item's floor price but is instructed never to reveal it
-4. **Multi-tool execution**: The agent loop handles multiple tool calls per turn for bundle purchases
-5. **Local-first**: No external API keys needed — runs entirely on Ollama
+1. **Raw SDK over frameworks**: Uses the OpenAI-compatible API directly instead of LangChain/CrewAI to demonstrate understanding of tool-calling fundamentals and reduce unneeded abstraction.
+2. **Decoupled Math**: The LLM handles the negotiation strategy, but strict Python functions handle the cash box arithmetic and floor price validation.
+3. **Dynamic Prompt Injection**: Defends against context-forgetfulness by injecting strict urgency and floor-price rules into the system prompt behind the scenes on every single turn.
+4. **Hidden minimum prices**: The LLM securely keeps a floor price in its context window but is strictly barred from leaking it to the user via prompt engineering.
+5. **Multi-tool execution**: The agent loop handles multiple tool calls per turn to allow fluid bundling mechanics.
+6. **Local-first**: No external API keys needed — runs entirely offline using Ollama.

@@ -41,16 +41,16 @@ def get_sale_status(state: dict) -> dict:
     # Determine urgency level
     if minutes_remaining <= 30:
         urgency = "closing_soon"
-        urgency_description = "The sale is about to end! Accept any reasonable offer at or above minimum price. Proactively offer bundle deals."
+        urgency_description = "CLOSING SOON — You MUST accept any offer at or above 50% of asking price. Start every response by mentioning the sale ends soon. Offer bundle deals unprompted."
     elif minutes_remaining <= 120:  # Last 2 hours (2 PM - 4 PM)
         urgency = "urgent"
-        urgency_description = "Getting late in the day. Be motivated to sell. Accept offers above minimum price readily. Offer discounts proactively."
+        urgency_description = "URGENT — Accept any offer above 70% of asking price immediately. Do not counter more than once. Show visible eagerness to sell."
     elif minutes_remaining <= 300:  # 11 AM - 2 PM
         urgency = "moderate"
-        urgency_description = "Mid-day — be flexible. Accept offers within 20% of asking price."
+        urgency_description = "MODERATE — Accept offers within 80% of asking price. You may counter once but stay flexible."
     else:  # 8 AM - 11 AM
         urgency = "relaxed"
-        urgency_description = "Early in the day — be firm on prices. Only accept offers within 10% of asking price."
+        urgency_description = "RELAXED — Hold firm. Only accept offers within 90% of asking price. You may reject low offers politely."
 
     # Count inventory stats
     total_items = len(state["inventory"])
