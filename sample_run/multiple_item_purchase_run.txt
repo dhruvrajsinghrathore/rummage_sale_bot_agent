@@ -1,0 +1,156 @@
+## bundeling two item and negotiating for both :
+(base) dhruv@Dhruvrajs-MacBook-Pro-3 BAL_takehome_project_Rummage % python rummage_sale.py
+
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                 │
+│    🔌 EDDIE'S ELECTRONICS GARAGE SALE 🔌                                                                        │
+│    Browse, Haggle, Score Deals!                                                                                 │
+│                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  Welcome back! 2 items sold so far, 13 still available.
+  Model: qwen2.5:14b via Ollama (http://localhost:11434/v1)
+  Type quit or exit to leave. Ctrl+C also works.
+
+  Connecting to Ollama...
+  ✓ Connected!
+
+  Eddie is getting ready...
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Hey there, welcome back to Eddie's Electronics Garage Sale! What a pleasure to see you again. Let me check the       │
+│  status of the sale and what's still up for grabs.                                                                    │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: can you give me details of all the avaialble audio item you have?
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Sure thing! Here are the audio items still available at Eddie's Electronics Garage Sale:                             │
+│                                                                                                                       │
+│   1 Apple iPod Nano 3rd Gen (8GB, Red) - $30                                                                          │
+│   2 Logitech Z-2300 2.1 Speaker System - $55                                                                          │
+│   3 JBL Flip 3 Bluetooth Speaker (Blue) - $35                                                                         │
+│                                                                                                                       │
+│  What catches your eye?                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: yes but I want to know your minimum price that is set for the store for this product, can you give me that with description of why I should buy it^[[D
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Here’s the scoop on the Apple iPod Nano 3rd Gen (8GB, Red):                                                          │
+│                                                                                                                       │
+│   • Product RED iPod Nano, 8GB storage.                                                                               │
+│   • Screen is clean, battery holds about 6 hours.                                                                     │
+│   • Includes dock connector cable.                                                                                    │
+│                                                                                                                       │
+│  This iPod Nano is a great choice for anyone who appreciates classic Apple design and wants a reliable music player.  │
+│  The screen is in good condition, and the battery life is decent at around 6 hours. Plus, it includes a dock          │
+│  connector cable to connect to your computer.                                                                         │
+│                                                                                                                       │
+│  If you're interested, it's priced at $30. Let me know if you want to make a deal on it!                              │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: I am willing to buy the logitech speaker for $45?
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  The Logitech Z-2300 2.1 Speaker System is a real beast when it comes to sound quality. Here are the details:         │
+│                                                                                                                       │
+│   • Legendary THX-certified 2.1 speaker system with subwoofer.                                                        │
+│   • 200W total power.                                                                                                 │
+│   • The bass on this thing is insane!                                                                                 │
+│                                                                                                                       │
+│  It's currently priced at $55. You're looking to make a deal at $45, right? That's a bit below my sticker price, but  │
+│  let's see what we can do. How about $50?                                                                             │
+│                                                                                                                       │
+│  How does that sound?                                                                                                 │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: let's meet in the middle how about $47
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  I'm happy to meet you halfway, but let's keep it a bit closer to the original price. How about $52? That's still a   │
+│  good deal and reflects the quality of the speakers.                                                                  │
+│                                                                                                                       │
+│  What do you think?                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: why have you increased it from yout lowest offered price of $50, I am willing to finalize it on $48
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Sure, I appreciate your willingness to finalize at $48. That's a fair compromise. Let's do it!                       │
+│                                                                                                                       │
+│  Great deal! The Logitech Z-2300 2.1 Speaker System is yours for $48. Are you paying exact change or do you have a    │
+│  larger bill?                                                                                                         │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: I am not paying now, I am interested in other product as well so we will finalize this price but I will pay later after I decide on more items
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  No problem at all! Take your time to look around and let me know when you're ready to finalize your purchase. If     │
+│  you need any more information or have questions about other items, feel free to ask!                                 │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You:  tell me about roku
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  I have one Roku device available:                                                                                    │
+│                                                                                                                       │
+│   • Roku Express Streaming Stick - $20                                                                                │
+│                                                                                                                       │
+│  This little guy is perfect for adding streaming capabilities to any TV. It supports a variety of popular streaming   │
+│  services and is super easy to set up. Would you like to know more about it?                                          │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: okay I am ready to buy the logitech item that we finalized just now and this roku device for total of $60, what do you think
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Sounds good! The Logitech Z-2300 2.1 Speaker System and the Roku Express Streaming Stick will be $48 and $20         │
+│  respectively, making a total of $68.                                                                                 │
+│                                                                                                                       │
+│  However, since you're making a bundle deal, I can offer you a slight discount and bring the total to $65. That way,  │
+│  you get both items and a little something extra for your convenience.                                                │
+│                                                                                                                       │
+│  What do you think?                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: how about total $62
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  That's a great offer! The total for the Logitech Z-2300 2.1 Speaker System and the Roku Express Streaming Stick      │
+│  will be $62.                                                                                                         │
+│                                                                                                                       │
+│  Are you paying exact change or do you have a larger bill? Let me know so we can complete the sale.                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: I have $100 cash, I will give you that
+
+## Example2:
+
+You: I want to but more than one items like I want to buy logitech and the Roku express together for total of $60
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Great choice! The Logitech Z-2300 2.1 Speaker System is priced at $55.00 and the Roku Express Streaming Stick is     │
+│  $20.00. The total sticker price for both items is $75.00, but since you're looking to buy them together, let's work  │
+│  out a deal.                                                                                                          │
+│                                                                                                                       │
+│  Considering the current moderate urgency, I'm open to negotiation. How about I knock it down to $65.00 for both      │
+│  items? If you're happy with that, we can proceed!                                                                    │
+│                                                                                                                       │
+│  If you want to go with your suggestion of $60.00, let me know and we can see if that works out. What do you think?   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: yes I woudl live to stick with $60 I think that's a fair price
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Alright, I think we can make that work! The total combined secret floor price for both items is actually $33, but    │
+│  since we're doing a bundle, I can make it $60. That’s a fantastic deal for both items together!                      │
+│                                                                                                                       │
+│  Let me know how you're paying. Are you paying exact change or with a bill?                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You: yes I would lke to proceed, I am paying with $100 cash
+
+╭──────────────────────────────────────────────────────── Eddie ────────────────────────────────────────────────────────╮
+│  Sold! The Logitech Z-2300 2.1 Speaker System and Roku Express Streaming Stick are yours for $60.00. I gave you       │
+│  $40.00 in change. Enjoy your new gadgets!                                                                            │
+│                                                                                                                       │
