@@ -1,0 +1,10 @@
+.env
+sale_state.json
+__pycache__/
+*.pyc
+.DS_Store
+BAL_takehome_project_Rummage.pdf
+BAL_Homework 2026_Rummage_Project.pdf
+
+# Test scenarios folder
+test_scenarios/
