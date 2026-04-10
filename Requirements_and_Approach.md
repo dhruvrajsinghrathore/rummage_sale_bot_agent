@@ -1,6 +1,9 @@
-# Requirements & Approach Summary
+# Why Rummage Sale?
+The Rummage Sale looked like the more interesting problem to dig into. An agent that changes how it behaves and negotiates as time runs out, a live inventory that shrinks as deals get made, and a buyer who can say anything and go in any direction, there are a lot of moving parts that all have to work together. That kind of problem felt worth the extra thought. The Lost & Found was a solid problem but fairly straightforward once you break it down. The Rummage Sale felt like there was more to figure out, more ways it could go wrong, and more to explore so the choice was pretty straightforward.
 
 This document provides a high-level breakdown of the original project requirements and the conceptual design approach used to solve them. It focuses on *how* we thought about the problem and designed the architecture, rather than the raw code mechanics.
+
+# Requirements & Approach Summary
 
 ---
 

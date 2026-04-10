@@ -25,7 +25,7 @@ A simple JSON file (`sale_state.json`) was used for state management. It is huma
 ## Technical Trade-offs
 
 **1. Model Context Drift vs. Dynamic Injection**
-Locally hosted models can experience instruction drift during lengthy negotiations. To counteract the model forgetting its urgency state or floor price secrecy, conversational state constraints are re-injected dynamically every single turn. This defensive engineering guarantees behavioral consistency regardless of the conversation length.
+Locally hosted models can experience instruction drift during lengthy negotiations. To counteract the model forgetting its urgency state or floor price secrecy, conversational state constraints are re-injected dynamically every single turn. This model limitation also directly influenced the architectural decision to offload all arithmetic to Python tool executors — a smaller local model is simply not reliable enough for cash calculations, change computation, or floor price validation, so Python owns all math entirely. This defensive engineering guarantees behavioral consistency regardless of the conversation length.
 
 **2. State Concurrency**
 JSON is fast and inspectable, but lacks row-level locking. For a single-user CLI application, this trade-off is optimal. For an online production environment with concurrent users, this state layer would require migration to SQLite or Redis to prevent overlapping sale race conditions.
@@ -42,3 +42,6 @@ Passing the full inventory natively to the LLM works for a boutique garage sale,
 
 **3. Algorithmic Pricing Engines**
 Instead of static JSON-defined floor prices, a production iteration could integrate real-time market engines pulling data from sources like eBay to algorithmically set moving floor-price thresholds based on actual supply and demand.
+
+**4. Concurrent Session Management**
+The current JSON state file has no locking mechanism. For a single-user CLI demo this is a non-issue, but in a production environment with multiple simultaneous buyers, two users could theoretically purchase the same item creating a race condition. The migration path is straightforward — replace the JSON file with SQLite for small-scale concurrency using row-level locking, or Redis with atomic operations for high-throughput scenarios. The tool interface (`make_sale`, `browse_inventory`) would not change — only the persistence layer underneath would be swapped out.

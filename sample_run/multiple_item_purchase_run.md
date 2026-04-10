@@ -1,3 +1,4 @@
+```text
 ## bundeling two item and negotiating for both :
 (base) dhruv@Dhruvrajs-MacBook-Pro-3 BAL_takehome_project_Rummage % python rummage_sale.py
 
@@ -154,3 +155,4 @@ You: yes I would lke to proceed, I am paying with $100 cash
 │  Sold! The Logitech Z-2300 2.1 Speaker System and Roku Express Streaming Stick are yours for $60.00. I gave you       │
 │  $40.00 in change. Enjoy your new gadgets!                                                                            │
 │                                                                                                                       │
+```
